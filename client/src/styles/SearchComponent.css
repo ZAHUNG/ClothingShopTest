@@ -1,0 +1,50 @@
+.search-container {
+  padding: 20px 0;
+  background-color: #f5f5f5; /* Nền xám sáng nhẹ */
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ccc; /* Viền xám nhạt */
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: white; /* Nền trắng */
+  color: #333; /* Chữ màu đen */
+}
+
+.search-input:focus {
+  border-color: #aaa; /* Viền khi focus chuyển thành xám sáng */
+}
+
+.search-button {
+  padding: 12px 24px;
+  background-color: #ddd; /* Nền nút xám nhạt */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-button:hover {
+  background-color: #bbb; /* Màu nền khi hover chuyển thành xám sáng hơn */
+}
+
+.search-button i {
+  font-size: 16px;
+}

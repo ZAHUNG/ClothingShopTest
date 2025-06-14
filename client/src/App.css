@@ -1,0 +1,16 @@
+/* src/App.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1; /* Chiếm hết không gian trống để đẩy footer xuống */
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}

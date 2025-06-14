@@ -1,0 +1,177 @@
+/* Tổng thể header */
+header {
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between; /* Chia đều các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Logo */
+.logo .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Menu chính */
+nav {
+  display: flex;
+  justify-content: center; /* Đảm bảo menu nằm giữa */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 40px; /* Khoảng cách giữa các mục menu */
+}
+
+.nav-link,
+.nav-item {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative; /* Để hiển thị dropdown */
+  text-align: center; /* Căn giữa chữ */
+}
+
+/* Định dạng khi hover vào menu, chữ sẽ chuyển sang màu xanh nhạt */
+.nav-link:hover,
+.nav-item:hover {
+  color: #5bc0de; /* Màu xanh nhạt khi hover */
+  background-color: transparent; /* Giữ nguyên màu nền khi hover */
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none; /* Ẩn mặc định */
+  position: absolute; /* Hiển thị ngay bên dưới mục */
+  top: 100%; /* Vị trí ngay dưới mục */
+  left: 0;
+  background-color: #f8f9fa;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block; /* Hiển thị dropdown khi hover */
+}
+
+/* Dropdown item */
+.dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Phần bên phải (nút Đăng nhập, Giỏ hàng) */
+.d-flex.gap-3 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Responsive chỉnh giữa các thành phần */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .d-flex.gap-3 {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+/* Đảm bảo greeting nằm dưới Đăng xuất */
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.greeting {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 5px; /* Khoảng cách giữa Đăng xuất và "Xin chào" */
+}
+
+/* Nút Đăng xuất */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #5bc0de; /* Hiệu ứng màu xanh nhạt khi hover */
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.user-menu .greeting {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-menu:hover .dropdown-menu {
+  display: block;
+}
+
+.user-menu .dropdown-menu {
+  min-width: 200px;
+  right: 0;
+  left: auto;
+  margin-top: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  background-color: white;
+  z-index: 1000;
+}
+
+.user-menu .dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.user-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #5bc0de;
+}
+
+.user-menu .dropdown-divider {
+  margin: 0;
+  border-top: 1px solid #eee;
+}
